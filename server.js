@@ -5,7 +5,6 @@ require('dotenv').config()
 const port = process.env.PORT || 3080
 
 const app = express()
-const assert = require("assert");
 
 const corsOptions = {
   origin: ['http://localhost:8000', "TODO: PUT PROD URL HERE!"],
@@ -50,8 +49,9 @@ app.get('/', cors(corsOptions), (req, res) => {
     `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.abbj1.mongodb.net/`,
     { useNewUrlParser: true, useUnifiedTopology: true },
     async function (connectErr, client) {
-      assert.equal(null, connectErr);
-      dbClient = client
+      if (connectErr) {
+        console.error('connectErr', connectErr)
+      }
       const coll = client.db("test").collection("venmo");
       const agg = createAggregate(search)
       let cursor = await coll.aggregate(agg);
