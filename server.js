@@ -7,7 +7,7 @@ const port = process.env.PORT || 3080
 const app = express()
 
 const corsOptions = {
-  origin: ['http://localhost:8000', "TODO: PUT PROD URL HERE!"],
+  origin: ['http://localhost:8000', "https://reidjs.github.io/"],
   optionsSuccessStatus: 200 
 }
 
