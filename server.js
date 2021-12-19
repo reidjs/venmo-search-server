@@ -7,7 +7,7 @@ const port = process.env.PORT || 3080
 const app = express()
 
 const corsOptions = {
-  origin: ['http://localhost:8000', "https://reidjs.github.io/"],
+  origin: ['http://localhost:8000', "https://reidjs.github.io/", "https://reidjs.github.io/venmo-search-frontend/", "https://github.io"],
   optionsSuccessStatus: 200 
 }
 
