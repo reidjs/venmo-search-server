@@ -6,10 +6,12 @@ const port = process.env.PORT || 3080
 
 const app = express()
 
-const corsOptions = {
-  origin: ['http://localhost:8000', "https://reidjs.github.io/", "https://reidjs.github.io/venmo-search-frontend/", "https://github.io"],
-  optionsSuccessStatus: 200 
-}
+app.use(cors())
+
+// const corsOptions = {
+//   origin: ['http://localhost:8000', "https://reidjs.github.io/", "https://reidjs.github.io/venmo-search-frontend/", "https://github.io"],
+//   optionsSuccessStatus: 200 
+// }
 
 const createAggregate = search => {
   const agg = [
@@ -38,7 +40,8 @@ const createAggregate = search => {
   return agg
 }
 
-app.get('/', cors(corsOptions), (req, res) => {
+// app.get('/', cors(corsOptions), (req, res) => {
+app.get('/', (req, res) => {
   const queryParams = req.query
   const search =  queryParams.q
   if (!search) {
