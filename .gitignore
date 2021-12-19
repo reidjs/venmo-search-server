@@ -1,0 +1,11 @@
+venmo.bson
+node_modules
+package-lock.json
+atlas_export.json
+server/.env
+netlify-express/.env
+dist
+dist-ssr
+*.local
+.DS_Store
+deprecated
