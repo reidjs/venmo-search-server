@@ -51,6 +51,8 @@ app.get('/', cors(corsOptions), (req, res) => {
     async function (connectErr, client) {
       if (connectErr) {
         console.error('connectErr', connectErr)
+        res.status(500).send(connectErr)
+        return
       }
       const coll = client.db("test").collection("venmo");
       const agg = createAggregate(search)
