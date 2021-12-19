@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"test.venmo"},{"v":2,"unique":true,"key":{"id":1.0},"name":"id_1","ns":"test.venmo"}],"uuid":"a95b7fe398b84829a8b34a1571f3b26d"}

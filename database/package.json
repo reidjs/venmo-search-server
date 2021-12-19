@@ -1,0 +1,17 @@
+{
+  "name": "mongo-hackathon",
+  "version": "1.0.0",
+  "description": "0. Got venmo data from https://github.com/sa7mon/venmo-data 1. Load in data to atlas:  mongorestore --uri mongodb+srv://USERNAME:PASSWORD@cluster0.abbj1.mongodb.net/test venmo.bson",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "reidjs",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "mongodb": "^4.2.2"
+  }
+}
