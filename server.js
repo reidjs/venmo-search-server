@@ -25,14 +25,18 @@ const createAggregate = search => {
       },
     },
     {
-      $limit: 10,
+      $limit: 25,
     },
     {
       // to limit reponse to certain files 
       // https://docs.mongodb.com/manual/reference/operator/aggregation/project/
       $project: {
-        _id: 0,
-        "payment.target.user.username": 1,
+        _id: 1,
+        "payment.target.user.display_name": 1,
+        "payment.target.user.profile_picture_url": 1,
+        "payment.actor.display_name": 1,
+        "payment.actor.profile_picture_url": 1,
+        "comments": 1,
         note: 1,
       },
     },
