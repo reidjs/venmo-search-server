@@ -25,9 +25,6 @@ const createAggregate = search => {
       },
     },
     {
-      $limit: 25,
-    },
-    {
       // to limit reponse to certain files 
       // https://docs.mongodb.com/manual/reference/operator/aggregation/project/
       $project: {
